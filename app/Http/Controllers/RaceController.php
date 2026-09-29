@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 use App\Models\Race; use Illuminate\Http\Request; use Illuminate\Support\Str;
 class RaceController extends Controller {
- public function home(){return view('race');}
+ public function home(){return view('dashboard');}
  public function joinPage(string $code){return view('join',['code'=>$code]);}
  public function create(){ $race=Race::create(['code'=>strtoupper(Str::random(6)),'names'=>[]]); return response()->json($race); }
  public function show(Race $race){return response()->json($race);}
