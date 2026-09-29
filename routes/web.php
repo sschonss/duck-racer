@@ -7,4 +7,5 @@ Route::post('/api/races',[RaceController::class,'create']);
 Route::get('/api/races/{race:code}',[RaceController::class,'show']);
 Route::post('/api/races/{race:code}/join',[RaceController::class,'join']);
 Route::post('/api/races/{race:code}/start',[RaceController::class,'start']);
+Route::delete('/api/races/{race:code}',[RaceController::class,'destroy']);
 Route::post('/api/races/{race:code}/import',[RaceController::class,'import']);
